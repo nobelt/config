@@ -8,6 +8,9 @@
         ("melpa-stable" . "https://melpa.org/packages/")))
 (package-initialize)
 
+;; Load path to custom theme
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
+
 ;; Substitue y-or-n-p for yes-or-no-p
 (defalias 'yes-or-no-p 'y-or-n-p)
 
@@ -78,8 +81,11 @@
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
    ["#242424" "#e5786d" "#95e454" "#cae682" "#8ac6f2" "#333366" "#ccaa8f" "#f6f3e8"])
- '(custom-enabled-themes (quote (manoj-dark)))
- '(package-selected-packages (quote (neotree orgalist))))
+ '(custom-enabled-themes (quote (zenburn)))
+ '(custom-safe-themes
+   (quote
+    ("0f0a885f4ce5b6f97e33c7483bfe4515220e9cbd9ab3ca798e0972f665f8ee4d" default)))
+ '(package-selected-packages (quote (zenburn-theme neotree orgalist))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
